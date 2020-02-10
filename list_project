@@ -1,0 +1,96 @@
+from statistics import mean
+from statistics import median
+from statistics import mode
+# Mohamed Bagayoko
+# 2/10/2020
+# List Operations
+
+# Lists
+my_lst = []
+even_lst =[]
+odd_lst = []
+
+# User Input Functions
+print("Please enter 5 numeric values:")
+user1 = int(input("> "))
+user2 = int(input("> "))
+user3 = int(input("> "))
+user4 = int(input("> "))
+user5 = int(input("> "))
+my_lst.append(user1)
+my_lst.append(user2)
+my_lst.append(user3)
+my_lst.append(user4)
+my_lst.append(user5)
+
+# Method Functions
+sort = sorted(my_lst)
+add_total = sum(my_lst)
+prod_total = user1 * user2 * user3 * user4 * user5
+average = mean(my_lst)
+middle = median(my_lst)
+# Didn't know how to do this
+# frequent = mode(my_lst)
+maxi = max(my_lst)
+mini = min(my_lst)
+no_duplicates = []
+for n in my_lst:
+    if n not in no_duplicates:
+        no_duplicates.append(n)
+for i in my_lst:
+    if i % 2 == 0:
+        even_lst.append(i)
+    else:
+        odd_lst.append(i)
+
+# Print Statements
+print(f"Your numeric list is {my_lst}")
+print(f"Your list when ordered {sort}")
+input("Input anything to continue..")
+print(f"The sum of your list is {add_total}")
+print(f"The product of your list is {prod_total}")
+input("Input anything to continue..")
+print(f"The mean is {average}")
+print(f"The median is {middle}")
+input(f"Input anything to continue..")
+# I didn't know how to do this part
+#if frequent == True:
+    #print(f"The median is {frequent}")
+#elif frequent == False:
+    #print(f"There is no mode. Every value is different ")
+print(f"The largest number is {maxi}")
+print(f"The smallest number is {mini}")
+input(f"Input anything to continue..")
+print(f"Your list with no duplicates is {no_duplicates}")
+print(f"Your list in even numbers only is {even_lst}")
+print(f"Your list in odd numbers only is {odd_lst}")
+print("Please input a random number from your head")
+user6 = int(input("> "))
+if user6 == user1:
+    print(f"Your input, {user6}, equals {user1} on the list")
+if user6 == user2:
+    print(f"Your input, {user6}, equals {user2} on the list")
+if user6 == user3:
+    print(f"Your input, {user3}, equals {user3} on the list")
+if user6 == user4:
+    print(f"Your input, {user4}, equals {user4} on the list")
+if user6 == user5:
+    print(f"Your input, {user5}, equals {user6} on the list")
+print("""Your done! If you did not get a message saying 'Your input, {a}, equals {b} on the list',
+you inputted answer did not equal to anything on your original list.""")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
